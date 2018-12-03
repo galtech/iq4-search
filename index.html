@@ -25,13 +25,12 @@
       <typeahead
         source="http://api.dataatwork.org/v1/jobs/autocomplete/"
         placeholder="Enter a job would like to search for..."
-        filter-key="contains"
+        filter-key="query"
         :start-at="4"
       ></typeahead>
 
         <div v-for="job in filtered" :key="job">
           <p> {{ job.title }} </p>
-          <p> {{ filtered.code }} </p>
         </div>
 
         <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
