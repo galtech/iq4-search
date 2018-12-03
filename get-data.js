@@ -2,14 +2,13 @@
 
 const app = new Vue({
   el: '#app',
+  name: 'Typeahead',
   data() {
     return {
         jobs: [],
         query: ''
     }
   },
-
-  name: 'Typeahead',
   props: {
     source: {
       type: [String, Array],
@@ -48,9 +47,9 @@ const app = new Vue({
   computed: {
     filtered(){
       if(this.query.length >= this.startAt){
-        return this.jobs.filter(item => {
+        return this.jobs.filter(job => {
           if(job.hasOwnProperty(this.filterKey)){
-            return item[this.filterKey]
+            return job[this.filterKey]
             .toLowerCase()
             .indexOf(this.query.toLowerCase()) > -1
           } else {
