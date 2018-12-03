@@ -31,7 +31,7 @@
 
         <div v-for="job in filtered" :key="job">
           <p> {{ job.title }} </p>
-          <p> {{ filtered.message }} </p>
+          <p> {{ filtered.code }} </p>
         </div>
 
         <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>

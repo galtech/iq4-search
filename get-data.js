@@ -2,6 +2,13 @@
 
 const app = new Vue({
   el: '#app',
+  data() {
+    return {
+        jobs: [],
+        query: ''
+    }
+  },
+
   name: 'Typeahead',
   props: {
     source: {
@@ -60,16 +67,8 @@ const app = new Vue({
       }
     }
   },
-  //
+
   mounted(){
     this.fetchItems()
-  },
-
-  data() {
-    return {
-        jobs: [],
-        query: ''
-    }
-  },
-
+  }
 });
