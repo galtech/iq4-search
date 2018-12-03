@@ -71,5 +71,6 @@ const app = new Vue({
         jobs: [],
         query: ''
     }
-  }  
+  }
+
 });
