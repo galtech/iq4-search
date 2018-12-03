@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <div>
+
+
+      <!-- <typeahead
+        source="http://api.dataatwork.org/v1/jobs/autocomplete"
+        placeholder="Enter a job would like to search for..."
+        filter-key="title"
+        :start-at="4"
+      > -->
+
+      <input
+        v-model="query"
+      >
+
+      <p>{{ query }} </p>
+
+      <!-- <transition-group name="fade" tag="ul" class="Results">
+        <li v-for="job in filtered" :key="job">
+          <span>
+            <strong>{{ job.title }}</strong> - <small>{{ job.uuid }}</small><br>
+          </span>
+        </li>
+      </transition-group> -->
+
+      <!-- <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p> -->
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script> -->
+      <script type="text/javascript" src="get-data.js"></script>
+  </body>
+</html>
