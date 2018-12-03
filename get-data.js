@@ -45,6 +45,10 @@ const app = new Vue({
     }
   },
 
+  mounted(){
+    this.fetchItems()
+  },
+
   computed: {
     filtered(){
       if(this.query.length >= this.startAt){
@@ -66,10 +70,7 @@ const app = new Vue({
         return this.filtered.length < 1
       }
     }
-  },
-
-  mounted(){
-    this.fetchItems()
   }
+
 
 });
