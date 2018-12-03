@@ -30,7 +30,7 @@
         :start-at="4"
       ></typeahead>
 
-        <div v-for="job in filtered">
+        <div v-for="job in filtered" :key="job">
           <p> {{ job.title }} </p>
         </div>
 
