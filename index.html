@@ -35,9 +35,9 @@
         source="https://api.heylinhosting.com/projects/"
         ></typeahead> -->
 
-        <div v-for="job in jobs">
+        <div v-for="job in filtered" :key="job">
           <p> {{ job.title }} </p>
-          <p> {{ jobs.message }} </p>
+          <p> {{ filtered.message }} </p>
         </div>
 
         <!-- <div v-for="job in filtered" :key="job">
