@@ -10,6 +10,9 @@
 
     <div id="masthead"></div>
 
+
+    <div id="app">
+
       <div class="input-group-mb3">
         <input
           v-model="query"
@@ -19,8 +22,6 @@
           :placeholder="placeholder"
         >
       </div>
-
-    <div id="app">
 
       <typeahead
         source="http://api.dataatwork.org/v1/jobs/autocomplete/"
