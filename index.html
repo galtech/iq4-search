@@ -29,8 +29,8 @@
         :start-at="4"
       ></typeahead>
 
-        <div v-for="job in filtered" :key="job">
-          <p> {{ job.title }} </p>
+        <div v-for="item in filtered" :key="item">
+          <p> {{ item.title }} </p>
         </div>
 
         <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
