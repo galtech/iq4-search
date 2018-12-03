@@ -22,19 +22,20 @@
 
     <div id="app">
 
-      <!-- <typeahead
+      <typeahead
         source="http://api.dataatwork.org/v1/jobs/autocomplete"
         placeholder="Enter a job would like to search for..."
-        filter-key="contains"
+        contains="query"
         :start-at="4"
-      ></typeahead> -->
+      ></typeahead>
 
-      <typeahead
+      <!-- <typeahead
+              filter-key="contains"
         source="https://api.heylinhosting.com/projects/"
-        ></typeahead>
+        ></typeahead> -->
 
-        <div v-for="project in jobs">
-          <p> {{ project.name }}
+        <div v-for="job in jobs">
+          <p> {{ job.title }}
         </div>
 
         <!-- <div v-for="job in filtered" :key="job">
