@@ -41,9 +41,9 @@ const app = new Vue({
   computed: {
     filtered(){
       if(this.query.length >= this.startAt){
-        return this.jobs.filter(item => {
+        return this.jobs.filter(job => {
           if(jobs.hasOwnProperty(this.filterKey)){
-            return item[this.filterKey]
+            return job[this.filterKey]
             .toLowerCase()
             .indexOf(this.query.toLowerCase()) > -1
           } else {
