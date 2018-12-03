@@ -30,7 +30,7 @@ const app = new Vue({
           .then(data => this.jobs = data)
           .catch(error => console.error(error))
       } else {
-        this.items = this.source
+        this.jobs = this.source
       }
     },
     reset(){

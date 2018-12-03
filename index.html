@@ -10,7 +10,6 @@
 
     <div id="masthead"></div>
 
-
     <div id="app">
 
       <div class="input-group-mb3">
@@ -30,19 +29,10 @@
         :start-at="4"
       ></typeahead>
 
-      <!-- <typeahead
-              filter-key="contains"
-        source="https://api.heylinhosting.com/projects/"
-        ></typeahead> -->
-
         <div v-for="job in filtered" :key="job">
           <p> {{ job.title }} </p>
           <p> {{ filtered.message }} </p>
         </div>
-
-        <!-- <div v-for="job in filtered" :key="job">
-          <p> {{ job.title }} </p>
-        </div> -->
 
         <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
 
