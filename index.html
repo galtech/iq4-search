@@ -27,13 +27,17 @@
         placeholder="Enter a job would like to search for..."
         filter-key="contains"
         :start-at="3"
-      ></typeahead>
+      >
 
-        <div v-for="item in items">
-          <p> {{ item.suggestion }} </p>
-        </div>
+      <div v-for="item in filtered">
+        <p> {{ item.suggestion }} </p>
+      </div>
 
-        <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
+      <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
+
+    </typeahead>
+
+
 
     </div>
 
