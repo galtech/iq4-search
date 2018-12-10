@@ -48,14 +48,13 @@ const app = new Vue({
       this.fetchItems()
     },
     isEmpty(){
-      if(typeof this.filtered === 'undefined'){
+      if(typeof computed.filtered === 'undefined'){
         return false
       } else {
-        return this.filtered.length < 1
+        return computed.filtered.length < 1
       }
     }
 },
-
 
   computed: {
     filtered(){
