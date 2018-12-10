@@ -44,20 +44,18 @@ const app = new Vue({
       this.query = ''
     },
 
-
-  mounted(){
-    this.fetchItems()
-  },
-
+    mounted(){
+      this.fetchItems()
+    },
+    isEmpty(){
+      if(typeof this.filtered === 'undefined'){
+        return false
+      } else {
+        return this.filtered.length < 1
+      }
+    }
 },
 
-isEmpty(){
-  if(typeof this.filtered === 'undefined'){
-    return false
-  } else {
-    return this.filtered.length < 1
-  }
-},
 
   computed: {
     filtered(){
