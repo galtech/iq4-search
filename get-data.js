@@ -49,7 +49,7 @@ const app = new Vue({
     },
     isEmpty(){
       if(typeof this.filtered === 'undefined'){
-        return false
+        return true
       } else {
         return this.filtered.length < 1
       }
