@@ -48,6 +48,7 @@ const app = new Vue({
       this.fetchItems()
     },
     isEmpty(){
+      console.log(computed.filtered);
       if(typeof computed.filtered === 'undefined'){
         return false
       } else {
