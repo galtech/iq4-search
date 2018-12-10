@@ -42,12 +42,22 @@ const app = new Vue({
     },
     reset(){
       this.query = ''
-    }
-  },
+    },
+
 
   mounted(){
     this.fetchItems()
   },
+
+},
+
+isEmpty(){
+  if(typeof this.filtered === 'undefined'){
+    return false
+  } else {
+    return this.filtered.length < 1
+  }
+},
 
   computed: {
     filtered(){
@@ -64,13 +74,7 @@ const app = new Vue({
         // })
       }
     },
-    isEmpty(){
-      if(typeof this.filtered === 'undefined'){
-        return false
-      } else {
-        return this.filtered.length < 1
-      }
-    }
+
   }
 
 });
