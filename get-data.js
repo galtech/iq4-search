@@ -48,31 +48,33 @@ const app = new Vue({
       this.fetchItems()
     },
     isEmpty(){
-      console.log(computed.filtered);
-      if(typeof computed.filtered === 'undefined'){
+      if(typeof this.filtered === 'undefined'){
         return false
       } else {
-        return computed.filtered.length < 1
-      }
-    }
-},
-
-  computed: {
-    filtered(){
-      if(this.query.length >= this.startAt){
-        return this.items
-        // .filter(item => {
-        //   if(item.hasOwnProperty(this.filterKey)){
-        //     return item[this.filterKey]
-        //     .toLowerCase()
-        //     .indexOf(this.query.toLowerCase()) > -1
-        //   } else {
-        //     console.error(`Seems like property you passed down ${this.filterKey} doesn't exist on object !`)
-        //   }
-        // })
+        return this.filtered.length < 1
       }
     },
-
-  }
+    filtered(){
+      return this.items
+    }
+}
+  //
+  // computed: {
+  //   filtered(){
+  //     if(this.query.length >= this.startAt){
+  //       return this.items
+  //       // .filter(item => {
+  //       //   if(item.hasOwnProperty(this.filterKey)){
+  //       //     return item[this.filterKey]
+  //       //     .toLowerCase()
+  //       //     .indexOf(this.query.toLowerCase()) > -1
+  //       //   } else {
+  //       //     console.error(`Seems like property you passed down ${this.filterKey} doesn't exist on object !`)
+  //       //   }
+  //       // })
+  //     }
+  //   },
+  //
+  // }
 
 });
