@@ -30,7 +30,7 @@
       ></typeahead>
 
         <div v-for="item in filtered" :key="item">
-          <p> {{ item.title }} </p>
+          <p> {{ item.suggestion }} </p>
         </div>
 
         <p v-show="isEmpty">Sorry, but we can't find any match for given term :(</p>
